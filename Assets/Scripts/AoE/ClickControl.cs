@@ -1,4 +1,3 @@
-using Unity.AI.Assistant.Agents;
 using UnityEngine;
 
 public class ClickControl : MonoBehaviour

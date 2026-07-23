@@ -687,7 +687,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157202013}
-  - component: {fileID: 1157202012}
+  - component: {fileID: 1157202014}
+  - component: {fileID: 1157202015}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -695,23 +696,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1157202012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157202011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b18aaddb004de44085d4ccb13213446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickControl
-  mainCamera: {fileID: 2144293374}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  rayDistance: 200
 --- !u!4 &1157202013
 Transform:
   m_ObjectHideFlags: 0
@@ -727,6 +711,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157202014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157202011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c3e8e3ae7ecbd4e8f5fe0f89542b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectControl
+  mainCamera: {fileID: 2144293374}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  rayDistance: 200
+--- !u!114 &1157202015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157202011}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b18aaddb004de44085d4ccb13213446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickControl
+  mainCamera: {fileID: 2144293374}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  rayDistance: 200
 --- !u!1001 &1336472218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,6 +1382,7 @@ GameObject:
   - component: {fileID: 2144293374}
   - component: {fileID: 2144293373}
   - component: {fileID: 2144293376}
+  - component: {fileID: 2144293377}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1489,6 +1508,18 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &2144293377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144293372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee304a65d43fcfd4b81f7770c2698ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ESC
 --- !u!1001 &720735866430339482
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -93,7 +93,9 @@ public class SelectControl : MonoBehaviour
         Rect selectionRect = new Rect(min.x, min.y, max.x - min.x, max.y - min.y);
 
         // Busca todas as tropas na cena (Para projetos grandes, prefira guardar isso numa lista global em um TroopManager)
-        TroopsMovement[] allTroops = FindObjectsByType<TroopsMovement>(FindObjectsSortMode.None);
+        //TroopsMovement[] allTroops = FindObjectsByType<TroopsMovement>(FindObjectsSortMode.None);
+        //TroopsMovement[] allTroops = FindAnyObjectByType<TroopsMovement>(FindObjectsSortMode.None);
+        TroopsMovement[] allTroops = FindObjectsByType<TroopsMovement>(FindObjectsInactive.Exclude);
 
         foreach (TroopsMovement troop in allTroops)
         {
