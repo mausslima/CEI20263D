@@ -10,13 +10,6 @@ public class TroopsMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void MoveTroops(Vector3 target)
     {
         if (!agent.isActiveAndEnabled) return;
