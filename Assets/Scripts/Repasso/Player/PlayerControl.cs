@@ -6,7 +6,7 @@ public class PlayerControl : MonoBehaviour
     private CharacterController characterController;
 
     private float speed = 15f;
-    private float rotationSpeed = 720f;
+    public float rotationSpeed = 720f;
     private float gravity = -20f;
 
     private float verticalVelocity;
