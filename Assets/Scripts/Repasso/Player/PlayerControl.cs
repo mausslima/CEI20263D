@@ -9,6 +9,9 @@ public class PlayerControl : MonoBehaviour
     public float rotationSpeed = 720f;
     private float gravity = -20f;
 
+    private float jumpForce = 10f;
+    [SerializeField] AudioSource jumpAudio;
+
     private float verticalVelocity;
 
     void Awake()
@@ -33,6 +36,12 @@ public class PlayerControl : MonoBehaviour
         //Movimento player
         if (!characterController.isGrounded) { if (verticalVelocity > -50) verticalVelocity += gravity * Time.deltaTime; }
         else verticalVelocity = -10f;
+
+        if (characterController.isGrounded && inputControl.inputJump)
+        {
+            verticalVelocity = jumpForce;
+            if (jumpAudio != null) jumpAudio.Play();
+        }
 
         Vector3 velocity = direction * speed;
         velocity.y = verticalVelocity;

@@ -5,6 +5,8 @@ public class InputControl : MonoBehaviour
 {
     public Vector2 inputPlayer;
     public Vector2 playerShoot;
+
+    public bool inputJump = false;
     public bool isShooting = false;
 
     public void InputMove(InputAction.CallbackContext callbackContext)
@@ -31,6 +33,19 @@ public class InputControl : MonoBehaviour
             case InputActionPhase.Canceled:
                 playerShoot = Vector2.zero;
                 isShooting = false;
+                break;
+        }
+    }
+
+    public void InputJump(InputAction.CallbackContext callbackContext)
+    {
+        switch (callbackContext.phase)
+        {
+            case InputActionPhase.Performed:
+                inputJump = true;
+                break;
+            case InputActionPhase.Canceled:
+                inputJump = false;
                 break;
         }
     }
