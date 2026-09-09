@@ -13,7 +13,6 @@ public class EnemyLife : MonoBehaviour
     [Header("Death")]
     [SerializeField] GameObject prefabExplosion;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -38,8 +37,8 @@ public class EnemyLife : MonoBehaviour
     {
         isDead = true;
 
-        //EnemyAI chase = GetComponent<EnemyAI>();
-        //if (chase != null) chase.enabled = false;
+        EnemyAI chase = GetComponent<EnemyAI>();
+        if (chase != null) chase.enabled = false;
 
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         if (agent != null) agent.enabled = false;

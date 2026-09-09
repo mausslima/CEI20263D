@@ -6,11 +6,11 @@ public class EnemyAI : MonoBehaviour
     public enum State { Patrol, Chase, Attack }
     public State actualState = State.Patrol;
     private Transform player;
-    [SerializeField] float chaseRange = 15f;
+    [SerializeField] float chaseRange = 7f;
     private float stopDistance = 2f;
 
     //---Patrol---//
-    [SerializeField] float patrolRadius = 10f;
+    [SerializeField] float patrolRadius = 5f;
     [SerializeField] float waitingTime = 2f;
     private Vector3 originPoint;
     private float arrivalTime;
